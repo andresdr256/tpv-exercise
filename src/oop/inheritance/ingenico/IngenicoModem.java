@@ -5,6 +5,16 @@ import oop.inheritance.data.TransactionResponse;
 
 public class IngenicoModem {
 
+    private static IngenicoModem ingenicoModem;
+
+
+    public static IngenicoModem getingenicoModem() {
+        if (ingenicoModem == null) {
+            ingenicoModem = new IngenicoModem();
+        }
+        return ingenicoModem;
+    }
+
     /**
      * Opens a connection using the modem device
      *
